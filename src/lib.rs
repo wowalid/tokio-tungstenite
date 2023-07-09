@@ -15,11 +15,11 @@ pub use tungstenite;
 mod compat;
 #[cfg(feature = "connect")]
 mod connect;
-mod handshake;
+pub  mod handshake;
 #[cfg(feature = "stream")]
 mod stream;
 #[cfg(any(feature = "native-tls", feature = "__rustls-tls", feature = "connect"))]
-mod tls;
+pub mod tls;
 
 use std::io::{Read, Write};
 
